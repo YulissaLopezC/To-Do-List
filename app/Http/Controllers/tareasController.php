@@ -75,7 +75,8 @@ class tareasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tareas = Tareas::find($id);
+        return view('edit', compact('tareas'));
     }
 
     /**

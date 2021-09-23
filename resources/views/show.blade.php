@@ -37,6 +37,7 @@
                     <p>{{$tareas->dia}}</p>
                     <center>
                         <input class="boton-atras" type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+                        <a href="/tareas/{{$tareas->id}}/edit" class="ver-mas"><i class="fas fa-plus-circle"></i></a>
                     </center>
                  </div>
             </section>

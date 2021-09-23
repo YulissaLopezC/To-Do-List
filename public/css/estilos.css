@@ -91,6 +91,24 @@ main{
     -moz-box-shadow: -6px 6px 16px 5px rgba(184, 192, 255, 0.63);
 }
 
+.edit-nueva-task{
+    width: 100%;
+    margin-right: 15px;
+    box-shadow: -6px 6px 16px 5px rgba(184, 192, 255,0.63);
+    -webkit-box-shadow: -6px 6px 16px 5px rgba(184, 192, 255, 0.63);
+    -moz-box-shadow: -6px 6px 16px 5px rgba(184, 192, 255, 0.63);
+}
+
+.edit-nueva-task form{
+    width: 100%;
+    height:500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .crear-nueva-task form{
     width: 100%;
     height:500px;
