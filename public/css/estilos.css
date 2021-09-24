@@ -247,10 +247,15 @@ table tbody tr:hover{
     font-size: 18px;
 }
 
+.botones{
+    display: flex;
+    flex-direction: row;
+}
 .boton-atras{
     width: 150px;
     height: 45px;
-    padding: 0;
+    padding: 0px;
+    margin-right: 10px;
     border-radius: 15px;
     border: none;
     background-color: var(--color-morado1);

@@ -88,7 +88,16 @@ class tareasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tareas = Tareas::find($id);
+        $tareas->fill($request->except("imagen"));
+        if($request->hasFile('imagen')){
+            $archivo = $request->file('imagen');
+            $nombrearchivo = time().$archivo->getClientOriginalName();
+            $tareas->imagen= $nombrearchivo;
+            $archivo->move(public_path().'/imagen/' , $nombrearchivo);
+        }
+        $tareas->save();
+        return "actualizado";
     }
 
     /**

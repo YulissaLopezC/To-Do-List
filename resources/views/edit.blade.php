@@ -27,15 +27,18 @@
              </center>
         <main>
             <section class="edit-nueva-task">
-                <form method="POST" action="/{{$tareas->id}}" enctype="multipart/form-data" >
+                <form method="POST" action="/tareas/{{$tareas->id}}" enctype="multipart/form-data" >
                     @method('PUT')
                     @csrf
                     <h1>Crear nueva Tarea</h1>
-                    <input class="campo-texto" value ="{{$tareas->name}}" type="text" placeholder="Nombre de tu tarea" name="nombreTarea"/>
+                    <input class="campo-texto" value ="{{$tareas->name}}" type="text" name="nombreTarea"/>
                     <textarea class="campo-descripcion" placeholder="Describe tu tarea" name="descripcion">{{$tareas->descripcion}}</textarea>
                     <input value ="{{$tareas->dia}}" class="campo-texto" type="text" placeholder="¿Cuando?" name="dia"/>
                     <input type="file" class="campo-imagen" name="imagen"/>
-                    <input class="boton-crear" type="submit" value = "Crear"/>
+                    <div class="botones">
+                        <input class="boton-atras" type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+                        <input class="boton-crear" type="submit" value = "Editar"/>
+                    </div>
                 </form>
             </section>
 
